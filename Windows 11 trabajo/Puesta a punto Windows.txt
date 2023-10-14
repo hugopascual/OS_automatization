@@ -1,0 +1,108 @@
+# Actualizar Windows
+# Desinstalar aplicaciones y que no puedan ir en segundo plano cosas como Cortana
+# Quitar iconos de escritorio
+##
+# Configuración
+##
+# Personalización
+- Modo Oscuro de Windows en tono azul
+> Fondo
+- Cambiar fondo de escritorio
+> Pantalla de bloqueo
+- Cambiar imagen de bloqueo
+- Deseleccionar los datos curiosos y consejos
+> Inicio
+- Seleccionar: Mas elementos anclados
+	> Carpetas
+	- Añadir Configuración y Explorador de archivos
+> Barra de tareas
+- Deseleccionar: Widgets y Chat
+	> Comportamiento de la barra de tareas
+	- Activar Ocultar automaticamente la barra de tareas
+
+# Sinconizar con One drive:
+- Cuenta UPM [hugo.pascual.adan@upm.es]
+
+# Instalar Chocolatey a traves de la PowerShell ejecutandola como Administrador
+# Consultar el comando a ejecutar en https://chocolatey.org/
+# Reiniciar la powershell después de instalarlo
+
+------------------------------------------- Instalaciones
+# Instalar las aplicaciones desde una terminal de administrador
+choco install -y git googledrive firefox googlechrome thunderbird spotify vscode 7zip keepass.install adobereader
+
+Descargar exe:
+https://www.sede.fnmt.gob.es/descargas/descarga-software/instalacion-software-generacion-de-claves
+https://firmaelectronica.gob.es/Home/Descargas.htm
+
+Microsoft Store:
+Microsoft Office
+
+------------------------------------------- Detalles sobre cada software
+# Google Drive
+- choco install -y googledrive
+- Iniciar sesión [hugopascual998@gmail.com]
+
+# Mozilla Firefox
+- choco install -y firefox
+- Establecer como predeterminado
+- Sincronizar cuenta [hugopascual998@gmail.com]
+- Mostrar siempre la barra de marcadores
+- Colocar el botón de inicio
+- Iniciar sesión en Google 
+[hugopascual998@gmail.com; turfusplays@gmail.com; hugo.pascual.adan@gmail.com]
+
+# Google Chrome
+- choco install -y googlechrome
+
+# Thunderbird
+- choco install -y thunderbird
+- Configurar correos con calendarios 
+[hugopascual998@gmail.com; turfusplays@gmail.com; hugo.pascual.adan@gmail.com; hugo.pasadan@hotmail.com]
+
+# Spotify
+- choco install -y spotify
+- Iniciar sesión [hugopascual998@gmail.com]
+- Quitar que se inicie con el ordenador y hacer que al cerrar no se minimice
+- Modo oscuro
+
+# Visual Studio Code
+- choco install -y vscode
+- Iniciar sesión con GitHub
+
+# 7zip
+- choco install -y 7zip
+
+# KeePass2
+- choco install -y keepass.install
+- Hacer que se vea el campo custom de email
+
+# Adobe Acrobat Reader
+- choco install -y adobereader
+
+# Configurador FNMT
+- Descargar de (https://www.sede.fnmt.gob.es/descargas/descarga-software/instalacion-software-generacion-de-claves)
+
+# Autofirma (se instala a la vez que el configurador)
+- Descargar de (https://firmaelectronica.gob.es/Home/Descargas.htm)
+
+# Microsoft Office con la cuenta de la UPM / En su defecto Libre Office
+- Instalar desde Microft Store
+
+# Instalar certificado en Firefox
+
+------------------------------------------- Anclados a Inicio Windows
+# Navegadores Web:
+- Mozilla Firefox
+
+# Uso diario:
+- Thunderbird
+- Spotify
+
+# PC:
+- Panel de control
+
+# Desarrollo:
+- Visual Studio Code
+
+-------------------------------------------
