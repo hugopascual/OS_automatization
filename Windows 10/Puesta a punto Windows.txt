@@ -1,11 +1,13 @@
-# Actualizar Windows
-# Desinstalar aplicaciones que vienen predeterminadas
-# Quitar iconos de escritorio
-##
+################################################################################
+# Inicio y configuración básica
+#------------------------------------------------------------------------------- 
+# - Actualizar Windows desde Configuración
+# - Desinstalar aplicaciones que vienen predeterminadas
+# - Quitar iconos de escritorio
+#-------------------------------------------------------------------------------
 # Configuración
-##
-# Personalización
-- Modo Oscuro de Windows en tono azul
+# Pestaña: Personalización
+# - Modo Oscuro de Windows en tono azul
 > Fondo
 - Cambiar fondo de escritorio
 > Pantalla de bloqueo
@@ -31,8 +33,8 @@
 # Consultar el comando a ejecutar en https://chocolatey.org/
 # Reiniciar después de instalarlo
 
-------------------------------------------- Instalaciones
-Comandos:
+# ------------------------------------------- Instalaciones
+# Comandos:
 choco install -y googledrive
 choco install -y firefox
 choco install -y googlechrome
