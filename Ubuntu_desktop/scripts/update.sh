@@ -14,7 +14,7 @@ sudo apt-get autoclean -y
 echo_info "Packages upgrades and updates finished"
 
 echo_info "Flatpak updates started"
-flatpak update
+flatpak update -y
 echo_info "Flatpak updates finished"
 
 echo_info "Snap updates started"
