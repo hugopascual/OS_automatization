@@ -121,15 +121,31 @@ install_VScode() {
 ##
 install_nodejs() {
     echo_info "Installing nodejs via apt-get"
-    sudo apt remove -y nodejs npm
-    sudo apt autoremove -y
-    cd ~
-    curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
-    sudo bash nodesource_setup.sh
-    sudo apt install -y nodejs
-    rm nodesource_setup.sh
+    sudo apt-get update
+    sudo apt-get install -y ca-certificates curl gnupg
+    sudo mkdir -p /etc/apt/keyrings
+    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+    
+    # NODE_MAJOR could be changed depending on the version you need
+    NODE_MAJOR=20
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+    
+    sudo apt-get update
+    sudo apt-get install nodejs -y
     echo_success "nodejs installed"
 }
+
+##
+# @Description
+# Uninstall nodejs and npm
+# https://github.com/nodesource/distributions#installation-instructions
+##
+uninstall_nodejs() {
+    apt-get purge nodejs &&\
+    rm -r /etc/apt/sources.list.d/nodesource.list &&\
+    rm -r /etc/apt/keyrings/nodesource.gpg
+}
+
 
 ##
 # @Description
@@ -169,7 +185,7 @@ install_jetbrains_toolbox() {
     sudo tar -xzf "$tar_file"
     # Mover el directorio descomprimido a /opt
     descompressed_dir="${tar_file: : -7}"
-    sudo mv "$descompressed_dir" /opt/s
+    sudo mv "$descompressed_dir" /opt/
     # Ejecutar el binario de dentro
     /opt/"$descompressed_dir"/jetbrains-toolbox
     # Borrar los restos
