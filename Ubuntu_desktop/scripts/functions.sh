@@ -10,23 +10,23 @@ BHIYellow='\033[1;93m' # Bold High Intensity Green
 BHICyan='\033[1;96m' # Bold High Intensity Cyan
 NoColor='\033[0m'
 echo_info() {
-    echo "${BHICyan}$1${NoColor}"
+    echo -e "${BHICyan}$1${NoColor}"
 }
 
 echo_success() {
-    echo "${BHIGreen}$1${NoColor}"
+    echo -e "${BHIGreen}$1${NoColor}"
 }
 
 echo_other() {
-    echo "${BHIYellow}$1${NoColor}"
+    echo -e "${BHIYellow}$1${NoColor}"
 }
 
 echo_installing() {
-    echo "${BHICyan}Installing $1${NoColor}"
+    echo -e "${BHICyan}Installing $1${NoColor}"
 }
 
 echo_installed() {
-    echo "${BHIGreen}$1 installed${NoColor}"
+    echo -e "${BHIGreen}$1 installed${NoColor}"
 }
 
 ##################################
@@ -78,7 +78,7 @@ snap_install() {
 ##
 # @Description
 # Install 
-# 
+#  
 ##
 install_template() {
 	echo_info ""
@@ -169,7 +169,7 @@ install_jetbrains_toolbox() {
     sudo tar -xzf "$tar_file"
     # Mover el directorio descomprimido a /opt
     descompressed_dir="${tar_file: : -7}"
-    sudo mv "$descompressed_dir" /opt/
+    sudo mv "$descompressed_dir" /opt/s
     # Ejecutar el binario de dentro
     /opt/"$descompressed_dir"/jetbrains-toolbox
     # Borrar los restos
@@ -196,4 +196,29 @@ install_proton_vpn() {
     sudo apt install -y gnome-shell-extension-appindicator gir1.2-appindicator3-0.1
     # Install command client
     sudo apt-get -y install protonvpn-cli
+}
+
+###########
+#--Other--#
+###########
+##
+# @Description
+# Update packages from Ubuntu repositories, Flatpak and Snap 
+##
+update() {
+	echo_info 'Upgrading and updating packages'
+	sudo apt-get update -y
+	sudo apt-get upgrade -y
+	sudo apt-get full-upgrade -y
+	sudo apt-get autoremove -y
+	sudo apt-get autoclean -y
+	echo_info "Packages upgrades and updates finished"
+
+	echo_info "Flatpak updates started"
+	flatpak update
+	echo_info "Flatpak updates finished"
+
+	echo_info "Snap updates started"
+	sudo snap refresh
+	echo_info "Snap updates finished"
 }

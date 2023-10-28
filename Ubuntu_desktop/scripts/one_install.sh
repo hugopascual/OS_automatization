@@ -8,12 +8,12 @@ DIRECTORY=$(dirname "$0")
 echo_info "Starting installation"
 
 #------------------------------- Update and Upgrade
-sh $DIRECTORY/update_and_upgrade_apt.sh
+update
 
 #------------------------------- Install
-
+install
 
 #------------------------------- Updates and Cleaning 
-sh $DIRECTORY/update_and_upgrade_apt.sh
+update
 
 #------------------------------- END

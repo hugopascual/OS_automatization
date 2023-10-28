@@ -6,11 +6,10 @@ DIRECTORY=$(dirname "$0")
 
 ##
 # @Description
-# https://protonvpn.com/support/linux-vpn-tool/
+# 
 ##
-install() {
-
+test() {
+	echo "1"
 }
 
-install
-
+test
