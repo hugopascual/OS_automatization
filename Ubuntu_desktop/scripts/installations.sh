@@ -27,6 +27,7 @@ apt_get_install "Git" "git"
 apt_get_install "Java" "default-jre"
 apt_get_install "Firefox" "firefox"
 apt_get_install "Teminator" "terminator"
+apt_get_install "GNU Image Manipulation Program" "gimp"
 
 #------------------------------- Snap installs
 
