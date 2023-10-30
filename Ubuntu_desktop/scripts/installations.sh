@@ -40,6 +40,7 @@ flathub_install "Google Chrome" "com.google.Chrome"
 flathub_install "KeePassXC" "org.keepassxc.KeePassXC"
 #flathub_install "Wireshark" "org.wireshark.Wireshark"
 #flathub_install "Postman" "com.getpostman.Postman"
+flathub_install "Telegram" "org.telegram.desktop"
 
 #-------------------------------Custom installs
 
