@@ -214,6 +214,18 @@ install_proton_vpn() {
     sudo apt-get -y install protonvpn-cli
 }
 
+##
+# @Description
+# https://firmaelectronica.gob.es/Home/Descargas.html
+##
+install_auto_firma_fnmt() {
+	echo_info "Installing AutoFirma"
+	curl -OL https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Linux_Debian.zip
+	unzip AutoFirma_Linux_Debian.zip
+	sudo apt install ./"$(ls | grep .deb)"
+	echo_installed "AutoFirma Installed"
+}
+
 ###########
 #--Other--#
 ###########
