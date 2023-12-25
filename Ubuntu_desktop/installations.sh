@@ -2,10 +2,10 @@
 
 DIRECTORY=$(dirname "$0")
 # Import installing functions
-. $DIRECTORY/functions.sh
+. "$DIRECTORY"/support_scripts/functions.sh
 
 #------------------------------- Configuration
-./$DIRECTORY/config.sh
+./"$DIRECTORY"/support_scripts/config.sh
 
 #------------------------------- Initialization
 echo_info "Starting installation"
@@ -19,7 +19,7 @@ install_VScode
 install_nodejs
 install_docker
 install_jetbrains_toolbox
-#install_proton_vpn
+install_lutris
 
 #------------------------------- apt-get repository installs
 apt_get_install "Basic utilities" "wget curl"
@@ -35,11 +35,10 @@ apt_get_install "GNU Image Manipulation Program" "gimp"
 flathub_install "VLC" "org.videolan.VLC"
 flathub_install "Thunderbird" "org.mozilla.Thunderbird"
 flathub_install "Spotify" "com.spotify.client"
-#flathub_install "LibreOffice" "org.libreoffice.LibreOffice"
 flathub_install "Google Chrome" "com.google.Chrome"
 flathub_install "KeePassXC" "org.keepassxc.KeePassXC"
-#flathub_install "Wireshark" "org.wireshark.Wireshark"
-#flathub_install "Postman" "com.getpostman.Postman"
+flathub_install "Wireshark" "org.wireshark.Wireshark"
+flathub_install "Postman" "com.getpostman.Postman"
 flathub_install "Telegram" "org.telegram.desktop"
 
 #-------------------------------Custom installs

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 DIRECTORY=$(dirname "$0")
-# Import installing functions
-. $DIRECTORY/functions.sh
+# Import auxiliar functions
+. "$DIRECTORY"/functions.sh
 
 #------------------------------- Initialization
 echo_info "Starting configuration"
@@ -35,7 +35,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 
 # ------------------------------- Terminal
-# Modificar el archivo .bashrc cambiando las \w por \W
+# Modify file .bashrc changing \w with \W
 sed -iE 's/\\w/\\W/' ~/.bashrc
 
 #------------------------------- END

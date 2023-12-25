@@ -195,6 +195,7 @@ install_jetbrains_toolbox() {
 
 ##
 # @Description
+# Install ProtonVPN
 # https://protonvpn.com/support/linux-ubuntu-vpn-setup/
 # https://protonvpn.com/support/linux-vpn-tool/
 ##
@@ -216,6 +217,7 @@ install_proton_vpn() {
 
 ##
 # @Description
+# Install Autofirma from FNMT
 # https://firmaelectronica.gob.es/Home/Descargas.html
 ##
 install_auto_firma_fnmt() {
@@ -223,7 +225,20 @@ install_auto_firma_fnmt() {
 	curl -OL https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Linux_Debian.zip
 	unzip AutoFirma_Linux_Debian.zip
 	sudo apt install ./"$(ls | grep .deb)"
-	echo_installed "AutoFirma Installed"
+	echo_installed "AutoFirma installed"
+}
+##
+# @Description
+# Install Lutris.
+# This software is used to install windows games on Linux
+# https://www.addictivetips.com/ubuntu-linux-tips/hearthstone-linux/
+##
+install_lutris() {
+  echo_info "Installing Lutris"
+  sudo add-apt-repository ppa:lutris-team/lutris
+  sudo apt-get update
+  sudo apt-get -y install lutris
+	echo_installed "Lutris installed"
 }
 
 ###########
