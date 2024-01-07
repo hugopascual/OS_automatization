@@ -1,9 +1,9 @@
 # Ubuntu software installations
-Inside this folder there are all the scripts necessary to install the software 
-I usually use. I tried to make it in a modular way so everyone can modify it to 
-its own taste.
+Inside this folder there are all the scripts and info necessary to install the 
+software I usually use. I tried to make it in a modular way so everyone can 
+modify it to its own taste.
 
-## Utilization and scripts explanation 
+## Use and scripts
 The scripts in `scripts` folder are the support for the `installations.sh` 
 script which install all the software. Furthermore, outside the 
 `support_scripts` folder there are two more scripts. The first one is 
@@ -29,7 +29,7 @@ There is a function to install Lutris, so you can install games like Hearthstone
 Linux. Once Lutris is installed you can go to https://lutris.net/games and 
 search for the games you want and follow the instructions to install them.
 
-## Other changes that are not automatized
+## Things that are not automatized
 ### Activate Wayland
 To activate Wayland, on the password screen click on the gear icon and activate
 it.
