@@ -1,8 +1,10 @@
 #!/bin/bash
 
 DIRECTORY=$(dirname "$0")
+FUNCTIONS_FILEPATH="$DIRECTORY/support_scripts/functions.sh"
 # Import installing functions
-. "$DIRECTORY"/support_scripts/functions.sh
+# shellcheck source=/dev/null
+source "$FUNCTIONS_FILEPATH"
 
 #------------------------------- Configuration
 ./"$DIRECTORY"/support_scripts/config.sh
