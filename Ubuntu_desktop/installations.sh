@@ -40,6 +40,7 @@ flathub_install "KeePassXC" "org.keepassxc.KeePassXC"
 flathub_install "Wireshark" "org.wireshark.Wireshark"
 flathub_install "Postman" "com.getpostman.Postman"
 flathub_install "Telegram" "org.telegram.desktop"
+flathub_install "Steam" "com.valvesoftware.Steam"
 
 #-------------------------------Custom installs
 
